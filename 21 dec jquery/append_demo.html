@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script>
+      $('document').ready(function(){
+        $('.button').click(function(){
+          a = $('.append-input').val();
+          $('ol').append("<li>" + a + "</li>");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>I am a heading</p>
+    <ol>
+      <li>Cetpa</li>
+    </ol>
+    <input type="text" class="append-input">
+    <button class="button">Add Item</button>
+  </body>
+</html>

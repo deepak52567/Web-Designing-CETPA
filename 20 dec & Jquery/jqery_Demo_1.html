@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script>
+      $("document").ready(function(){
+        $("#b1").click(function(){
+          $("#p1").text("I am Changed!");
+        });
+        $("#b2").click(function(){
+          $("#p2").html("<b>I am also Changed!<b>");
+        });
+      $("#b3").click(function(){
+        a=$("input").val();
+        alert(a);
+      });
+    });
+    </script>
+  </head>
+  <body>
+    <p id="p1">I am paragraph 1</p>
+    <p id="p2">I am paragraph 2</p>
+    <input type="text">
+    <button id="b1">Change Para 1</button>
+    <button id="b2">Change Para 2</button>
+    <button id="b3">Alert with the value.</button>    
+  </body>
+</html>

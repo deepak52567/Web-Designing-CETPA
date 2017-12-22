@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script>
+      $('document').ready(function(){
+        $('.b1').click(function(){
+          $('div').slideUp(5000);
+        });
+        $('.b2').click(function(){
+          $('div').slideDown(5000);
+        });
+        $('.b3').click(function(){
+          $('div').slideToggle(5000);
+        });
+        $('.b4').click(function(){
+          $('div').stop();
+        });
+      });
+    </script>
+    <style>
+      div{
+        height: 200px;
+        width: 200px;
+        background: cyan;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hey there. Div Here.</div>
+    <button class="b1">Slide It Up</button>
+    <button class="b2">Slide It Down</button>
+    <button class="b3">Slide Toggle</button>
+    <button class="b4">Stop Slide</button>
+  </body>
+</htmlSlide >

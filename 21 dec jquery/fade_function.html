@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script>
+      $('document').ready(function(){
+        $('.b1').click(function(){
+          $('div').fadeIn(1000);
+        });
+        $('.b2').click(function(){
+          $('div').fadeOut(1000);
+        });
+        $('.b3').click(function(){
+          $('div').fadeToggle(1000);
+        });
+      });
+    </script>
+    <style>
+      div{
+        height: 200px;
+        width: 200px;
+        background: cyan;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Hey there. Div Here.</div>
+    <button class="b1">Show</button>
+    <button class="b2">Hide</button>
+    <button class="b3">Toggle</button>
+  </body>
+</html>

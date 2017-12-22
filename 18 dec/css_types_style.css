@@ -1,0 +1,21 @@
+h2 {
+    font-size: 20px;
+    color: darkslateblue;
+    background: cyan;
+    font-family: roboto;
+}
+
+#id_demo{
+    font-size: 15px;
+    font-weight: bold;
+    color: darkorchid;
+    background: lightgreen;
+    font-family: roboto;    
+}
+
+.class_demo{
+    font-size: 10px;
+    font-weight: bold;
+    color: green;
+    background: lightseagreen;
+}

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 2px solid grey;
+        background: #F44336;
+      }
+      div p {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+      $('document').ready(function(){
+        $('.but-1').click(function(){
+          $('div').show();
+        });
+        $('.but-2').click(function(){
+          $('div').hide();
+        });
+        $('.but-3').click(function(){
+          $('div').remove();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>I am div bro.</div>
+    <button class="but-1">Show bro</button>
+    <button class="but-2">Hide bro</button>
+    <button class="but-3">Delete bro</button>
+  </body>
+</html>
