@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+      $('document').ready(function(){
+        $('p').next().css({ //Use next() for selecting next single item within the same level without selecting itself.
+          'border' : '2px solid red' //Use nextAll() for selecting all the next items excluding itself.
+        }); //Use nextUntil() with an argument for selecting items till the mentioned from the starting item excluding both the selected items. 
+      });
+    </script>
+  </head>
+  <body>
+    <div class="descendent" style="background: black;">
+      <div style="width: 500px; height: 500px; background: grey;">
+        <ul>
+          <li> <!-- Direct Parent of Span -->
+            <span class="span1" style="background: white;">Span Tag 1</span>
+          </li>
+        </ul>
+      </div>
+      <div style="width: 600px; height: 600px; background: blue;">
+        <p class="ptag"> <!-- Direct Parent of span -->
+          <span class="span2" style="background: white;">Span Tag 2</span>
+        </p>
+        <ul>
+          <li> <!-- Direct Parent of Span -->
+            <span class="span1" style="background: white;">Span Tag 1</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

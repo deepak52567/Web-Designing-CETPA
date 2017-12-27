@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.50').click(function(){
+          $('p').fadeTo('slow', 0.5, function(){
+          });
+        });
+        $('.70').click(function(){
+          $('p').fadeTo('slow', 0.3, function(){
+          });
+        });
+        $('.90').click(function(){
+          $('p').fadeTo('slow', 0.1, function(){
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is the text which is going to be fade.</p>
+    <input type="radio" class="50">50% Fade<br>
+    <input type="radio" class="70">70% Fade<br>
+    <input type="radio" class="90">90% Fade<br>
+  </body>
+</html>

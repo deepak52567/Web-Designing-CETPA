@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+      $('document').ready(function(){
+        $('div').animate({
+          width : '250px',
+          height : '250px',
+          left : '200px',
+          top: '200px',
+          opacity : '1'
+        });
+      });
+    </script>
+    <style media="screen">
+      div{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        opacity: 0.5;
+        background: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      I am a div
+    </div>
+    <button type="button" name="button">I'ma Butn</button>
+  </body>
+</html>

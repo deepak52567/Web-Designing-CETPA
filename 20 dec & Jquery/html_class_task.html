@@ -192,7 +192,10 @@
               <input type="text" class="result">
             </div>
             <div>
-              <button class="cal-button">Calculate</button>
+              <button class="sub-button">Subtract</button>
+              <button class="div-button">Divide</button>
+              <button class="mul-button">Multiply</button>
+              <button class="add-button">Add</button>
             </div>
           </div>
         </div>
@@ -204,11 +207,29 @@
   </body>
   <script>
     $('document').ready(function(){
-      $('.cal-button').click(function(){
+      $('.add-button').click(function(){
         a = $('.first-box').val();
         b = $('.sec-box').val();
-        c = a + b;
-        $('.result').vsal(c);
+        c = parseInt(a) + parseInt(b);
+          $('.result').val(c);
+      });
+      $('.mul-button').click(function(){
+        a = $('.first-box').val();
+        b = $('.sec-box').val();
+        c = parseInt(a) * parseInt(b);
+        $('.result').val(c);
+      });
+      $('.div-button').click(function(){
+        a = $('.first-box').val();
+        b = $('.sec-box').val();
+        c = parseInt(a) / parseInt(b);
+        $('.result').val(c);
+      });
+      $('.sub-button').click(function(){
+        a = $('.first-box').val();
+        b = $('.sec-box').val();
+        c = parseInt(a) - parseInt(b);
+        $('.result').val(c);
       });
     });
   </script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+      $('document').ready(function(){
+        $('div').children('p.ptag').css({ //Use children() for down level till the root element, children() with an argument for till that tag.
+          'border' : '2px solid red'
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="descendent" style="background: black;">
+      <div style="width: 500px; height: 500px; background: grey;">
+        <ul>
+          <li> <!-- Direct Parent of Span -->
+            <span class="span1" style="background: white;">Span Tag 1</span>
+          </li>
+        </ul>
+      </div>
+      <div style="width: 600px; height: 600px; background: blue;">
+        <p class="ptag"> <!-- Direct Parent of span -->
+          <span class="span2" style="background: white;">Span Tag 2</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
