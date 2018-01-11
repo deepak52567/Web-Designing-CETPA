@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script>
+        function testfunc() {
+          var a, b;
+          a = document.getElementById("username").value;
+          b = document.getElementById("password").value;
+          c = document.getElementById("contact").value;
+          d = c.length;
+          if(a == "") {
+            alert("Enter username first!");
+            return false;
+          } if(b == "") {
+            alert("Enter password also.");
+            return false;
+          } if(c == "") {
+            alert("Enter contact also");
+            return false;
+          } if(isNaN(c)) {
+            alert("Enter number only");
+            return false;
+          } if (d!=10) {
+            alert("Enter 10 digit number only");
+            return false;
+          }
+          return true;
+        }
+    </script>
+  </head>
+  <body>
+    <form action="process.html" type="POST" onsubmit="return testfunc();">
+      Enter Name: <input type="text" id="username">
+      Enter Password: <input type="text" id="password">
+      Enter Contact: <input type="text" name="contact" id="contact">
+      <input type="submit" name="submit">
+    </form>
+  </body>
+</html>

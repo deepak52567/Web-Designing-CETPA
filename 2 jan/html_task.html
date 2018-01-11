@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>District Scheme Tracking System</title>
+    <script src="jquery.min.js"></script>
+    <script>
+      function testfunc() {
+        var a, b, c, d;
+        a = document.getElementById("user").value;
+        b = document.getElementById("pass").value;
+        c = document.getElementById("contact").value;
+        d = c.length;
+        e = document.getElementById("email").value;
+        em = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(a == "") {
+          alert("Enter username first!");
+          document.getElementById("user").focus();
+          return false;
+        } else if(b == "") {
+          alert("Enter password also.");
+          document.getElementById("pass").focus();          
+          return false;
+        } else if(c == "") {
+          alert("Enter mobile number also.");
+          document.getElementById("contact").focus();
+          return false;
+        } if(isNaN(c)) {
+          alert("Enter numbers only");
+          document.getElementById("contact").focus();
+          return false;
+        } if(d != 10) {
+          alert("Enter 10 digits number only!");
+          document.getElementById("contact").focus();
+          return false;
+        } if(!e.match(em)) {
+          alert("Invalid Email Id");
+          document.getElementById("email").focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center;">{ DSTS }</h1>
+      <h1>DISTRICT SCHEME TRACKING SYSTEM</h1>
+    </header>
+    <main>
+      <aside>
+        <div class="login-ui">
+          <form action="process.html" onsubmit="return testfunc();" type="POST">
+            <span>QUICK LOGIN</span>
+            <input type="text" name="user" id="user" placeholder="Username">
+            <input type="text" name="pass" id="pass" placeholder="Password">
+            <input type="text" name="contact" id="contact" placeholder="Contact Number">
+            <input type="text" name="email" id="email" placeholder="Email ID">
+            <input type="submit" name="submit" class="button">
+          </form>
+        </div>
+        <div class="work-ui">
+          <span>Citizen</span>
+          <a href="#">Location Wise Progress Report</a>
+          <a href="#">Summary of Work</a>
+        </div>
+      </aside>
+      <section>
+        <article>
+          <h1>BACKGROUND</h1>
+          <p>Our look is the result comments, our own experimentation, and feedback from distribution channels.
+             Distinctive covers complement our distinctive approach to techincal topics, breathing personality 
+             and life into potentially dry subjects. The animal on the cover of Programming PHP is cuckoo 
+             (Cuculus canorus). Cuckoo epitomize minimal effort. The common cuckoo doesn't buid a nest - instead,
+             the female chuckoo finds another bird's nest that already contains eggs and lays an egg in it (a 
+             process she may repeat up to 25 times, leaving 1 egg per nest). The nest mother rarely notices the 
+            addition, and usually incubates the egg and then feeds the hatching as if it were her own. Why don't 
+            eggs look the same in the ultraviolet spectrum, which birds can see. </p>
+        </article>
+        <article>
+          <h1>SCOPE</h1>
+          <p>Our look is the result of reader comments, our own experimentation, and feedback from distribution 
+            channels. Distinctive covers complement our distinctive approach to techincal topics, breathing 
+            personality and life into potentially dry subjects. The animal on the cover of Programming PHP is 
+          a cuckoo.</p>
+        </article>        
+      </section>
+    </main>
+    <footer>
+      <h4>CETPA INFOTECH PVT LTD @ 2017</h4>
+    </footer>
+  </body>
+</html>
