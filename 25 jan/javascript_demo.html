@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var a, b, c;
+      a = parseInt(prompt('Enter 1st number:'));
+      b = parseInt(prompt('Enter 2nd number:'));
+      c = a + b;
+      alert('Result using alert():' + c); /*To show a alert on webpage*/
+      conf = confirm('Resut using confirm():' + c); /* To show a confirm on webpage and it returns a value of 'true' or 'false'. */
+      if(conf == true){
+        document.write(conf, '<br>', 'Result: ',c); /* To write in 'document'. It works only with 'document'. */
+      } else if(conf == false) {
+        document.write(conf, '<br>', 'User pressed cancel!'); /* To write in 'document'. It works only with 'document'. */
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  background: #2873f0;
+  color: white;
+  padding: 0 10%;
+}
+
+header .customer-header {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+header .customer-header a {
+  color: white;
+  padding: 0.2em 0.5em;
+}
+
+header .main-header {
+  display: flex;
+
+}

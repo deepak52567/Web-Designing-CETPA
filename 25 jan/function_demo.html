@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      var a, b, c;
+      a = parseInt(prompt('Enter 1st value:'));
+      b = parseInt(prompt('Enter 2nd value:'));
+      function sum() {
+        c = a + b;
+        alert('Addition: ' + c);
+      };
+      function mul() {
+        c = a * b;
+        alert('Multiplication: ' + c);
+      };
+      //  sum(); To call the function & it can also be called multiple times
+    </script>
+  </head>
+  <body>
+    <span>Result will appear here.</span>
+    <button type="button" name="button" onclick="sum();">Add</button>
+    <button type="button" name="button" onclick="mul();">Multiply</button>
+  </body>
+</html>
