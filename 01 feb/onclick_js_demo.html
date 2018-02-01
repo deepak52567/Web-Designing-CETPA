@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>onClick JS Demo</title>
+  <script>
+    function oncickChange() {
+      var image;
+      image = document.getElementById('imgID');
+      if(image.scr.match('bulbon.jpg')) {
+        image.src = 'bulboff.jpg';
+      } else {
+        image.scr = 'bulbon.jpg';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Click on image to change it</h1>
+  <img src="bulboff.jpg" alt="" onclick="onclickChange();">
+</body>
+</html>

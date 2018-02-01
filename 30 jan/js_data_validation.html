@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data Validation - JS</title>
+  <style>
+  span {
+    color: red;
+  }
+  </style>
+  <script>
+    function emailval() {
+      var email = document.getElementById('email').value;
+      var emailval = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(email == '') {
+        document.getElementById('error1').innerHTML = 'Enter Email ID';
+        document.getElementById('error1').focus();
+      } else if(!email.match(emailval)) {
+        document.getElementById('error1').innerHTML = 'Enter Valid Email ID';
+      } else {
+        document.getElementById('error1').innerHTML = '';
+      }
+    }
+    function passvalid() {
+      var pass = document.getElementById('pass').value;
+      var passval = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+      if(pass == '') {
+        document.getElementById('error2').innerHTML = 'Enter Password';
+      } else if(!pass.match(passval)) {
+        document.getElementById('error2').innerHTML = 'Enter valid Password';
+      } else {
+        document.getElementById('error2').innerHTML = '';
+      }
+    }
+    function aboutval(data) {
+      l = data.length;
+      if(l <= 140) {
+        r = 140-l;
+        document.getElementById('error3').innerHTML = r + 'Characters Left';
+      } else {
+        document.getElementById('error3').innerHTML = 'Limit Exceeds!';
+        document.getElementById('about').readOnly = true;
+        // document.getElementById('error3').disable = true;
+      }
+    }
+    function stateval(s){
+      if(s == ''){
+        document.getElementById('error4').innerHTML = 'Select your state';  
+      } else {
+        d = "YOUR HTML CODE TO ADD";
+        document.getElementById('city').innerHTML = d;
+      }
+    }
+    function paraval() {
+      alert('Selected');
+    }
+  </script>
+</head>
+<body>
+  <form action="data.html" method="get">
+    Enter Email: <input type="text" name="" id="email" onblur="emailval();"><span id="error1"></span><br>
+    Enter Password: <input type="password" name="" id="pass" onblur="passvalid();"><span id="error2"></span><br>
+    About You: <textarea name="about" rows="8" cols="30" id="about" onkeyup="aboutval(this.value);"></textarea><span id="error3"></span><br>
+    Select State: <select name="" id="state" onchange="stateval(this.val);">
+                    <option value="">Select State</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="up">UP</option>
+                    <option value="punjab">Punjab</option>
+                  </select><span id="error4"></span><br>
+    Select City: <span id="city"></span>
+    <input type="button" value="submit">
+    <p id="para1" onselect="paraval();">
+      I am paragraph. I am paragraph. I am paragraph. I am paragraph. I am paragraph.
+    </p>
+  </form>
+</body>
+</html>

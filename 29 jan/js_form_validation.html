@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Validation</title>
+  <style>
+  span{
+    color: red;
+  }
+  </style>
+  <script>
+    function validate() {
+      var name, number, email, pass, l;
+      name = document.getElementsByName('name')[0].value;
+      number = document.getElementsByName('number')[0].value;
+      email = document.getElementsByName('email')[0].value;
+      pass = document.getElementsByName('pass')[0].value;
+      l = number.length;
+      emailval = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      passval = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+      if (name == "") {
+        document.getElementById('s1').innerHTML = 'Name must be filled.';
+        return false;
+      } else {
+        document.getElementById('s1').innerHTML = '';
+      }
+      if(number == "") {
+        document.getElementById('s2').innerHTML = 'Number cant be blank';
+        return false;
+      } else {
+        document.getElementById('s2').innerHTML = '';
+      }
+      if(isNaN(number)) {
+        document.getElementById('s2').innerHTML = 'Enter numbers only';
+        return false;
+      } else {
+        document.getElementById('s2').innerHTML = '';
+      }
+      if(l != 10) {
+        document.getElementById('s2').innerHTML = 'Enter 10 digit numbers only';
+        return false;
+      } else {
+        document.getElementById('s2').innerHTML = '';
+      }
+      if(email == ""){
+        document.getElementById('s3').innerHTML = 'Email must be filled!';
+        return false;
+      } else {
+        document.getElementById('s3').innerHTML = '';
+      }
+      if(!email.match(emailval)){
+        document.getElementById('s3').innerHTML = 'Enter valid email only';
+        return false;
+      } else {
+        document.getElementById('s3').innerHTML = '';
+      }
+      if(pass == ""){
+        document.getElementById('s4').innerHTML = 'Password is needed.';
+        return false;
+      } else {
+        document.getElementById('s4').innerHTML = '';
+      }
+      if(!pass.match(passval)){
+        document.getElementById('s4').innerHTML = 'Enter valid password';
+        document.getElementById('s4_1').style.display = 'block';
+        return false;
+      } else {
+        document.getElementById('s4').innerHTML = '';
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form action="data.html" method="get" onsubmit="return validate();">
+    Enter Name: <input type="text" name="name"><span id="s1"></span><br>
+    Enter Contact Number: <input type="text" name="number"><span id="s2"></span><br>
+    Enter Email ID: <input type="text" name="email"><span id="s3"></span><br>
+    Enter Password: <input type="password" name="pass"><br><span id="s4"><br><span style="display: none;" id="s4_1">At least one number, one lowercase and one uppercase letter
+        <br>At least six characters that are letters, numbers or the underscore</span></span><br>
+    <input type="submit" value="submit">
+  </form>
+</body>
+</html>
