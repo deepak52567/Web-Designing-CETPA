@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    Enter 1st Num: <input type="text" name="" id="num1"><br>
+    Enter 2nd Num: <input type="text" name="" id="num2"><br>
+    Result: <input type="text" name="" id="res"><br>
+    <button id="result-bt">Result</button>
+    <button id="add-text">Click Here</button>
+    <p>This paragraph is going to change.</p>
+  </body>
+  <script>
+    $(document).ready(function(){
+      var a, b, c;
+      $('#result-bt').click(function(){
+        a = parseInt($('#num1').val());
+        b = parseInt($('#num2').val());
+        c = a + b;
+        $('#res').val(c);
+      });
+      $('#add-text').click(function(){
+        // $('p').text('Cetpa Infotech!'); /*'text()' adds the string in the documents*/
+        // $('p').html('<b>Cetpa Infotech!</b>'); /* 'html()' add the text with html tags too. */
+        // $('p').hide();
+        $('p').hide('slow'); /* use 'slow', or numbers to animate the process*/
+      });
+    });
+  </script>
+</html>
